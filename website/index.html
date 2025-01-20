@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehmet Yılmaz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#anasayfa">Ana Sayfa</a></li>
+                <li><a href="#hakkimda">Hakkımda</a></li>
+                <li><a href="#projeler">Projeler</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="https://github.com/F4LD3X" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mehmet-yilmazz-/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="anasayfa" class="hero">
+            <img src="profile-photo.jpg" alt="Mehmet Yılmaz" class="profile-photo">
+            <h1>Hoş Geldiniz</h1>
+            <h2 class="subtitle">Mehmet Yılmaz</h2>
+            <p>Bilgisayar Mühendisliği Öğrencisi</p>
+        </section>
+
+        <section id="hakkimda">
+            <h2>Hakkımda</h2>
+            <div class="hakkimda-content">
+                <p>Merhaba!</p>
+                <p>Ben Mehmet, yazılım geliştirme yolculuğuna tutku ile başlamış bir bilgisayar mühendisiyim. C++, C, Arduino ve STM32 konularında kendimi geliştirme sürecindeyim. Yeni teknolojiler öğrenmek ve bunları gerçek hayatta uygulamak, beni heyecanlandıran en büyük motivasyon kaynaklarımdan biri.</p>
+                <p>B2 seviyesindeki İngilizce bilgilerim sayesinde profesyonel düzeyde iletişim kurabiliyorum. Analitik düşünme becerilerim ve problem çözme tutkumla, yaratıcı projelere katkı sağlayarak fark yaratmayı hedefliyorum.</p>
+                <p>Eğer iş birliği yapmak veya fikir paylaşmak isterseniz, her zaman iletişime geçebilirsiniz!</p>
+            </div>
+        </section>
+
+        <section id="projeler">
+            <h2>Projelerim</h2>
+            <div class="proje-container">
+                <div class="proje">
+                    <h3>Formula Takımı Yazılım Projesi</h3>
+                    <p>1.5 Adana Formula takımının yazılım ekibinde, araç kontrol sistemleri ve veri analizi üzerine çalışmalar yapıyorum.</p>
+                </div>
+                <div class="proje">
+                    <h3>E-spor Başarıları</h3>
+                    <p>2020-2024 yılları arasında Mersin E-spor bünyesinde Valorant ve Zula takımlarının menajerliğini yürüttüm. Bu süreçte takım yönetimi, oyuncu gelişimi ve turnuva organizasyonu konularında deneyim kazandım.</p>
+                </div>
+                <div class="proje">
+                    <h3>Kişisel Projeler</h3>
+                    <p>GitHub profilimde yer alan çeşitli yazılım projeleri ve denemeleri yapıyorum.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="iletisim">
+            <h2>İletişim</h2>
+            <div class="iletisim-bilgileri">
+                <p><i class="fas fa-envelope"></i> mehmetyilmz16@gmail.com</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/F4LD3X" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/mehmet-yilmazz-/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2025 Mehmet Yılmaz. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    // Hamburger menü tıklama olayı
+    menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        // Menü açıkken sayfanın kaydırılmasını engelleyelim
+        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Menü linklerine tıklandığında
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', function() {
+            navMenu.classList.remove('active');
+            document.body.style.overflow = ''; // Sayfanın kaydırılmasını tekrar aktif edelim
+        });
+    });
+
+    // Sayfa dışına tıklandığında menüyü kapatalım
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.nav-menu') && !event.target.closest('.menu-toggle')) {
+            navMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+    </script>
+</body>
+</html> 

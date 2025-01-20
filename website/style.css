@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.menu-toggle {
+    display: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+section {
+    padding: 4rem 2rem;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(244,244,244,0.9), rgba(244,244,244,0.9));
+    padding-top: 120px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.proje-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.proje {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.proje:hover {
+    transform: translateY(-5px);
+}
+
+.proje h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #333;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    header {
+        position: fixed;
+        height: 60px;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+        color: white;
+        z-index: 1002;
+    }
+
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(51, 51, 51, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1001;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    .hero {
+        padding-top: 100px;
+        min-height: 100vh;
+    }
+
+    .profile-photo {
+        margin-top: 2rem;
+    }
+
+    .social-links {
+        margin-top: 2rem;
+    }
+
+    header .social-links {
+        display: none;
+    }
+
+    .nav-menu .social-links {
+        display: flex;
+    }
+
+    .proje-container {
+        grid-template-columns: 1fr;
+    }
+
+    .social-links {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ddd;
+    transform: scale(1.1);
+}
+
+.profile-photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    border: 4px solid #333;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+}
+
+.hakkimda-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    padding: 0 1rem;
+}
+
+.hakkimda-content p {
+    margin-bottom: 1.5rem;
+    color: #444;
+}
+
+.iletisim-bilgileri {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.iletisim-bilgileri p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.iletisim-bilgileri i {
+    margin-right: 0.5rem;
+    color: #333;
+} 
