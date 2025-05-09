@@ -1,0 +1,35 @@
+Hello,
+
+We would like to introduce our project.
+
+What is this project about?
+This is a sun tracker project. The goal is to detect and follow the direction of the light. For this purpose, we are using:
+
+1 Servo motor
+
+2 photodiodes or LDR
+
+Arduino Uno
+
+ROS 2 (we may also need a computer or a mini PC to run ROS 2)
+
+How does it work?
+We use ROS 2 to manage and run the control code, while the Arduino Uno handles predefined, low-level operations such as reading sensor values and controlling the motor.
+
+Merhaba,
+
+Size projemizi tanıtmak istiyoruz.
+
+Bu proje nedir?
+Bu bir güneş takip sistemi projesidir. Amaç, ışığın yönünü algılayıp bu yöne doğru hareket etmektir. Bunun için şu bileşenleri kullanıyoruz:
+
+1 adet Servo motor
+
+2 adet fotodiyot ya da LDR
+
+Arduino Uno
+
+ROS 2 (ROS 2’yi çalıştırmak için bir bilgisayar veya mini PC’ye ihtiyaç duyabiliriz)
+
+Nasıl çalışıyor?
+Kontrol kodlarını çalıştırmak ve yönetmek için ROS 2 kullanıyoruz. Arduino Uno ise temel işlemleri (sensör okumaları ve motor kontrolü gibi) yerine getiriyor.
